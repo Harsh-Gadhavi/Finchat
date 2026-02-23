@@ -5,7 +5,6 @@ import {
   UserButton,
 } from "@clerk/nextjs";
 import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { LayoutDashboard, PenBox } from "lucide-react";
 import { checkUser } from "@/lib/checkUser";
@@ -17,13 +16,6 @@ const Header = async () => {
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">FinChat</div>
-          <Image
-            src={"/logo.png"}
-            alt="FinChat Logo"
-            width={200}
-            height={60}
-            className="h-12 w-auto object-contain"
-          />
         </Link>
 
         {/* Navigation Links - Different for signed in/out users */}
